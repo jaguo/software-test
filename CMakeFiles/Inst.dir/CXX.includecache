@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guo/Desktop/test/libInst.cpp
+cstdlib
+-
+cstdio
+-
+iostream
+-
+cstring
+-
+vector
+-
+algorithm
+-
+

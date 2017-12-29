@@ -1,0 +1,5 @@
+/home/guo/Desktop/test/CMakeFiles/edit_cache.dir
+/home/guo/Desktop/test/CMakeFiles/Inst.dir
+/home/guo/Desktop/test/CMakeFiles/codeCoverage.dir
+/home/guo/Desktop/test/CMakeFiles/demo.dir
+/home/guo/Desktop/test/CMakeFiles/rebuild_cache.dir

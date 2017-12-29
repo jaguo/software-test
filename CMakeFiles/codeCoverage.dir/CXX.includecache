@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guo/Desktop/test/codeCoverage.cpp
+cstdlib
+-
+iostream
+-
+vector
+-
+string
+-
+getopt.h
+-
+BPatch.h
+/home/guo/Desktop/test/BPatch.h
+BPatch_object.h
+/home/guo/Desktop/test/BPatch_object.h
+BPatch_binaryEdit.h
+/home/guo/Desktop/test/BPatch_binaryEdit.h
+BPatch_flowGraph.h
+/home/guo/Desktop/test/BPatch_flowGraph.h
+BPatch_function.h
+/home/guo/Desktop/test/BPatch_function.h
+BPatch_module.h
+/home/guo/Desktop/test/BPatch_module.h
+BPatch_point.h
+/home/guo/Desktop/test/BPatch_point.h
+
