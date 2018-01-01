@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11    CMakeFiles/demo.dir/demo.cpp.o  -o demo -rdynamic 
+/usr/bin/c++  -std=c++11   -rdynamic CMakeFiles/demo.dir/demo.cpp.o  -o demo 

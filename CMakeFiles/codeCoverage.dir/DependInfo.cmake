@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/guo/Desktop/test/codeCoverage.cpp" "/home/guo/Desktop/test/CMakeFiles/codeCoverage.dir/codeCoverage.cpp.o"
+  "/home/guo/homework/software-test/codeCoverage.cpp" "/home/guo/homework/software-test/CMakeFiles/codeCoverage.dir/codeCoverage.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

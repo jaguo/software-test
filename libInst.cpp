@@ -7,9 +7,17 @@
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>
+#include <fstream>
 #include <cstring>
 #include <vector>
 #include <algorithm>
+
+#include "rapidjson/document.h"  
+#include "rapidjson/prettywriter.h"  
+#include "rapidjson/filewritestream.h"
+#include "rapidjson/stringbuffer.h"  
+  
+using namespace rapidjson;  
 using namespace std;
 
 class bbRecord
@@ -174,6 +182,13 @@ void exitCoverage(int printAll, int printBasicBlocks, int sortAlphabetical)
 
         string curFunc;
         string curMod;
+        
+        bool flag = false;
+        ofstream out("out.json");
+
+        StringBuffer jsonBuffer;
+        Writer<StringBuffer> writer(jsonBuffer);
+        writer.StartObject();
         for (int i = 0; i < numBBs; ++i)
         {
             if (bbs[i].count > 0)
@@ -183,18 +198,30 @@ void exitCoverage(int printAll, int printBasicBlocks, int sortAlphabetical)
 
             if (curFunc != bbs[i].funcName || curMod != bbs[i].modName)
             {
+                if (flag)
+                    writer.EndObject();
+                flag = true;
                 curFunc = bbs[i].funcName;
                 curMod = bbs[i].modName;
+                writer.Key(curFunc.c_str());
+                writer.StartObject();
+                writer.Key(to_string(bbs[i].startAddress).c_str());
+                writer.Uint(bbs[i].count);
                 printf(" (%s, %s)\n", bbs[i].funcName.c_str(), bbs[i].modName.c_str());
                 printf(" \t %4lu : 0x%-8lx--  0x%-8lx\n", bbs[i].count, bbs[i].startAddress, bbs[i].endAddress);
             }
             else
             {
                 printf(" \t %4lu : 0x%-8lx--  0x%-8lx\n", bbs[i].count, bbs[i].startAddress, bbs[i].endAddress);
+                writer.Key(to_string(bbs[i].startAddress).c_str());
+                writer.Uint(bbs[i].count);
             }
         }
+        writer.EndObject();
+        writer.EndObject();
+        out << jsonBuffer.GetString() << endl;
         printf("\n ************** Basic Block Coverage %d out of %d blocks ************** \n\n", bbCount, numBBs);
+        out.close();
     }
-
     enabled = 0;
 }

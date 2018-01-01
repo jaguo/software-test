@@ -15,18 +15,14 @@ int main(int argc, char **argv)
 {
     int i = 0;
     scanf("%d", &i);
-    if (i > 3)
-    {
-        for (auto i = 0; i < 5; i++)
-        {
-            foo1();
-            foo1();
-        }
-    }
-    else
-    {
+    if(i == 1){
+        foo1();
+    } else if (i == 2) {
+        for (; i >0; i--)
+            foo2();
+    } else if (i == 3) {
+        foo1();
         foo2();
     }
-    foo2();
     return 0;
 }

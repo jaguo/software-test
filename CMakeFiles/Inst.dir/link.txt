@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -std=c++11   -shared -Wl,-soname,libInst.so -o libInst.so CMakeFiles/Inst.dir/libInst.cpp.o 
+/usr/bin/c++ -fPIC -std=c++11   -shared -Wl,-soname,libInst.so -o libInst.so CMakeFiles/Inst.dir/libInst.cpp.o 

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/guo/Desktop/test/codeCoverage.cpp
+/home/guo/homework/software-test/codeCoverage.cpp
 cstdlib
 -
 iostream
@@ -18,17 +18,17 @@ string
 getopt.h
 -
 BPatch.h
-/home/guo/Desktop/test/BPatch.h
+/home/guo/homework/software-test/BPatch.h
 BPatch_object.h
-/home/guo/Desktop/test/BPatch_object.h
+/home/guo/homework/software-test/BPatch_object.h
 BPatch_binaryEdit.h
-/home/guo/Desktop/test/BPatch_binaryEdit.h
+/home/guo/homework/software-test/BPatch_binaryEdit.h
 BPatch_flowGraph.h
-/home/guo/Desktop/test/BPatch_flowGraph.h
+/home/guo/homework/software-test/BPatch_flowGraph.h
 BPatch_function.h
-/home/guo/Desktop/test/BPatch_function.h
+/home/guo/homework/software-test/BPatch_function.h
 BPatch_module.h
-/home/guo/Desktop/test/BPatch_module.h
+/home/guo/homework/software-test/BPatch_module.h
 BPatch_point.h
-/home/guo/Desktop/test/BPatch_point.h
+/home/guo/homework/software-test/BPatch_point.h
 
